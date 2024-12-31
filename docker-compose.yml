@@ -1,0 +1,9 @@
+services:
+  sre:
+    build:
+      context: .
+    volumes:
+      # cache for building, change if needed
+      - ~/go/pkg:/go/pkg
+      - ./data:/app/data
+      - ./.env:/app/.env
